@@ -20,6 +20,11 @@ clf.fit(X_train, y_train)
 print("R2 Score for Training Data:", clf.score(X_train, y_train))
 print("R2 Score for Test Data:", clf.score(X_test, y_test))
 
+sns.scatterplot(x=X_train[:, 0], y=X_train[:, 1], hue=y_train)
+
+plt.title("Train Data")
+plt.show()
+
 # Predict on the test data
 y_pred = clf.predict(X_test)
 
